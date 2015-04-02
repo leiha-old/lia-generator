@@ -1,0 +1,20 @@
+<?php
+
+namespace {{ namespace }};
+
+{% block use_statements %}
+use Lia\KernelBundle\Bundle\BundleBase;
+{% endblock use_statements %}
+
+{% block class_definition %}
+class {{ bundle }}
+    extends BundleBase
+{% endblock class_definition %}
+{
+{% block class_body %}
+    public function getAlias()
+    {
+        return '{{ bundle }}';
+    }
+{% endblock class_body %}
+}
